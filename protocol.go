@@ -1,5 +1,3 @@
-// protocol.go
-
 package main
 
 import (
@@ -7,32 +5,22 @@ import (
 )
 
 type Request struct {
-	Action string `json:"action"`
-	Data   string `json:"data"`
+	Method string `json:"method"`
+	Params string `json:"params"`
 }
 
-type Response struct {
-	Result string `json:"result"`
-	Data   string `json:"data"`
+func NewRequest(method string, params string) *Request {
+	return &Request{
+		Method: method,
+		Params: params,
+	}
 }
 
-func EncodeRequest(req Request) ([]byte, error) {
-	return json.Marshal(req)
+func (r *Request) ToJSON() ([]byte, error) {
+	return json.Marshal(r)
 }
 
-func DecodeRequest(b []byte) (Request, error) {
-	var req Request
-	err := json.Unmarshal(b, &req)
-	return req, err
-}
-
-func EncodeResponse(res Response) ([]byte, error) {
-	return json.Marshal(res)
-}
-
-func DecodeResponse(b []byte) (Response, error) {
-	var res Response
-	err := json.Unmarshal(b, &res)
-	return res, err
+func (r *Request) FromJSON(data []byte) error {
+	return json.Unmarshal(data, r)
 }
 

@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net"
+
+    "github.com/user/go-json-service/protocol"
 )
 
 func handleConnection(conn net.Conn) {

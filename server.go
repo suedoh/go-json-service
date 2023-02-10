@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-    "github.com/user/go-json-service/protocol"
+    "github.com/suedoh/go-json-service/protocol"
 )
 
 func handleConnection(conn net.Conn) {

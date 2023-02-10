@@ -13,7 +13,7 @@ Prerequisites
 
 Clone the repository to your local machine:
 
-$ git clone https://github.com/suedoh/json-microservice.git
+`$ git clone https://github.com/suedoh/json-microservice.git`
 
 ## Project Structure
 
@@ -54,8 +54,8 @@ This will build a Docker image for the service using the Dockerfile included in 
 
 ## Built With
 
-[Go](https://golang.org/) - The programming language used
-[Docker](https://www.docker.com/) - Containerization technology used in the project
+- [Go](https://golang.org/) - The programming language used
+- [Docker](https://www.docker.com/) - Containerization technology used in the project
 
 ## Author
 
@@ -63,4 +63,4 @@ This will build a Docker image for the service using the Dockerfile included in 
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the LICENSE.md file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](./LICENSE) file for details.
